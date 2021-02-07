@@ -1,3 +1,4 @@
+import { User } from "./schemas/User";
 import "dotenv/config";
 import { config, createSchema } from "@keystone-next/keystone/schema";
 
@@ -20,7 +21,9 @@ export default config({
     adapter: "mongoose",
     url: databaseURL
   },
-  lists: createSchema({}),
+  lists: createSchema({
+    User
+  }),
   ui: {
     isAccessAllowed: () => true
   }
