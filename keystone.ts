@@ -1,3 +1,4 @@
+import { ProductImage } from "./schemas/ProductImage";
 import { Product } from "./schemas/Product";
 import { User } from "./schemas/User";
 import "dotenv/config";
@@ -39,7 +40,8 @@ export default withAuth(
     },
     lists: createSchema({
       User,
-      Product
+      Product,
+      ProductImage
     }),
     ui: {
       isAccessAllowed: ({ session }) => {
