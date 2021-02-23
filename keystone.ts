@@ -1,3 +1,4 @@
+import { CartItem } from "./schemas/CartItem";
 import { ProductImage } from "./schemas/ProductImage";
 import { Product } from "./schemas/Product";
 import { User } from "./schemas/User";
@@ -53,7 +54,8 @@ export default withAuth(
     lists: createSchema({
       User,
       Product,
-      ProductImage
+      ProductImage,
+      CartItem
     }),
     ui: {
       isAccessAllowed: ({ session }) => {
